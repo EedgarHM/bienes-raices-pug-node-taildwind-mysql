@@ -4,6 +4,8 @@ import cookieParse from 'cookie-parser';
 
 
 import usuarioRoutes from './routes/usuarioRoutes.js';
+import propiedadesRoutes from './routes/propiedadesRoutes.js'
+
 import db from './config/db.js';
 
 const app = express();
@@ -34,6 +36,7 @@ app.set('views','./views')
 
 // Routing
 app.use('/auth', usuarioRoutes)
+app.use('/', propiedadesRoutes)
 
 // Static Files
 app.use( express.static('public'))
